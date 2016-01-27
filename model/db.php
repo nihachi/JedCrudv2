@@ -3,35 +3,26 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "CRUD";
-    //Create Connection
-$conn = new mysqli($servername,$username,$password,$dbname);
-    //Check Connection
-if($conn->connect_error){
-    die("Connection failed:" . $conn->connect_error);
-}
 
-    //Create DateBase
-$sql = "CREATE DATABASE IF NOT EXISTS CRUD";
-if($conn->query($sql)===TRUE){
-    echo "";
-}else {
-    echo "Error Creating Database:". $conn->error;
-}
+try { //CHECK CONNECTION
+    $conn = new PDO("mysql:host=$servername;dbname=CRUD", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //CREATE DB
+    $sql = "CREATE DATABASE IF NOT EXISTS CRUD";
+    //CREATE TABLE
+    $sql = "CREATE TABLE IF NOT EXISTS People(
+    id int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name varchar(30) not null,
+    address varchar(30) not null,
+    age varchar(5) not null,
+    contact varchar(15) not null
+    )";
 
-$sql = "CREATE TABLE IF NOT EXISTS People(
-id int(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-name varchar(30) not null,
-address varchar(30) not null,
-age varchar(5) not null,
-contact varchar(15) not null)";
+    $conn->exec($sql);
 
-if($conn->query($sql)===TRUE){
-    echo "";
-
-}else{
-    echo "Failed to add Table".$conn->error;
-}
-
-
-
+    }
+catch(PDOException $e)
+    {
+    echo $sql . "<br>" . $e->getMessage();
+    }
 ?>

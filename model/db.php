@@ -17,9 +17,7 @@ try { //CHECK CONNECTION
     age varchar(5) not null,
     contact varchar(15) not null
     )";
-
     $conn->exec($sql);
-
     }
 catch(PDOException $e)
     {

@@ -24,14 +24,11 @@ foreach($row AS $key => $value) { $row[$key] = stripslashes($value); }
 
     <td valign='top'><a href="view/edit.php?id=<?php echo $row['id']; ?>">Edit</a></td>
     <td><a href="controller/deletecontroller.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure want to Update?'); "</a>Delete</td>
-
-
 <?php
 echo "</tr>";
-
 }
 ?>
-    </form>
+</form>
 </table>
 </body>
 </html>

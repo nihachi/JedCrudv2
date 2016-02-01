@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,7 @@
 ?>
 <div class="container">
     <div class="btn-group">
-        <button class="btn"><a href="show.php">Home</a></button>
+        <button class="btn"><a href="index.php">Home</a></button>
     </div>
     <h3>Insert data</h3>
     <form action="" method="post">

@@ -8,7 +8,7 @@ if(isset($_REQUEST['insert'])){
     extract($_REQUEST);
     if($obj->insertData($name,$address,$age,$contact,"People")){
         echo "Saved";
-        echo ('<meta http-equiv="refresh" content="1;url=http:/phpcrud/JedCrudv4/view/insert.php">');
+        echo ('<meta http-equiv="refresh" content="1;url=http:/JedCrudv3/insert.php">');
     }
 }
 //Update Data
@@ -22,7 +22,7 @@ if(isset($_REQUEST['update'])){
 //Delete Data
 if(isset($_REQUEST['del_id'])){
     if($obj->deleteData($_REQUEST['del_id'],"People")){
-
+        echo ('<meta http-equiv="refresh" content="0;url=http:/JedCrudv3/index.php">');
     }
 }
 ?>

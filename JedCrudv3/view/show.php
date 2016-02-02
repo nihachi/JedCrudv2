@@ -4,10 +4,11 @@
     <title>PHP</title>
 </head>
 <body>
-<?php include 'controller/PeopleController.php';?>
+<?php
+include ('../index.php');?>
 <div class="container" align="center">
     <div class="btn_group">
-        <button class="btn"><a href="index.php">Home</a></button>
+        <button class="btn"><a href="show.php">Home</a></button>
         <button class="btn"><a href="insert.php">Insert</a></button>
     </div>
     <h3> List</h3>
@@ -28,7 +29,7 @@ echo <<<show
         <td>$age</td>
         <td>$contact</td>
         <td><button class="btn"><a href="update.php?id=$id">Edit</a></button>&nbsp;&nbsp;
-            <button class="btn"><a href="index.php?del_id=$id>" onclick="return confirm('Are you sure want to Delete?'); "</a>Delete</button>
+            <button class="btn"><a href="show.php?del_id=$id>" onclick="return confirm('Are you sure want to Delete?'); "</a>Delete</button>
         </td>
     </tr>
 show;

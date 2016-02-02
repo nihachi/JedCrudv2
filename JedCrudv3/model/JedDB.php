@@ -1,4 +1,5 @@
 <?php
+
 class JedDB{
     private $host="localhost";
     private $username="root";

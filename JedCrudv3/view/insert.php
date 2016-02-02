@@ -1,16 +1,14 @@
-<?php
-?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Add new People</title>
 </head>
 <body>
-<?php include 'controller/PeopleController.php';
+<?php include '../index.php';
 ?>
 <div class="container">
     <div class="btn-group">
-        <button class="btn"><a href="index.php">Home</a></button>
+        <button class="btn"><a href="show.php">Home</a></button>
     </div>
     <h3>Insert data</h3>
     <form action="" method="post">

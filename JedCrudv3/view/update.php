@@ -5,11 +5,11 @@
 </head>
 <body>
 <?php
-include 'controller/PeopleController.php';
+include '../index.php';
 ?>
 <div class="container">
     <div class="container">
-        <button class="btn"><a href="index.php">Home</a></button>
+        <button class="btn"><a href="show.php">Home</a></button>
     </div>
     <h3>Update Data</h3>
     <form action="show.php" method="post">

@@ -1,0 +1,29 @@
+body{
+ width: 0 auto;
+ margin-left: 150px;
+ margin-right: 150px;
+background-color: #E9E3E3;
+}
+
+h1{
+    text-align: center;
+}
+
+#calculator{
+    background-color: #FFFFFF;
+    padding: 20px;
+    margin-left: 299px;
+    margin-right: 299px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+.container{
+    padding-left: 60px;
+}
+
+

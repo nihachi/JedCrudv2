@@ -19,13 +19,13 @@
     operator;
 
   var setNum = function() {
+
     if (resultNum) {
       CurrentNumber = this.getAttribute("data-num");
       resultNum = "";
-    } else {
+    }else{
       CurrentNumber += this.getAttribute("data-num");
     }
-
     viewer.innerHTML = CurrentNumber;
   };
 
@@ -35,28 +35,28 @@
     operator = this.getAttribute("data-ops");
 
     equals.setAttribute("data-result", "");
+    viewer.innerHTML = FirstNumber+operator;
 
   };
-
   var displayNum = function() {
 
     FirstNumber = parseFloat(FirstNumber);
     CurrentNumber = parseFloat(CurrentNumber);
 
     switch (operator) {
-      case "plus":
+      case "+":
         resultNum = FirstNumber + CurrentNumber;
         break;
 
-      case "minus":
+      case "-":
         resultNum = FirstNumber - CurrentNumber;
         break;
 
-      case "times":
+      case "*":
         resultNum = FirstNumber * CurrentNumber;
         break;
 
-      case "divided by":
+      case "/":
         resultNum = FirstNumber / CurrentNumber;
         break;
 

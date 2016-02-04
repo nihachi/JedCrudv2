@@ -15,8 +15,7 @@ h1{
         background-color:#eeeeee;
         border:2px solid #CCCCCC;
         margin:auto;
-        padding-bottom:5px;
-        padding-top: 50px;
+        padding-bottom: 84px;
 }
 
 button{
@@ -26,6 +25,7 @@ button{
     padding-left: 28.2px;
     padding-right: 28.2px;
 }
+
 
 #viewer{
     border: 2px solid gray;

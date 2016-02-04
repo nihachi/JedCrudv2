@@ -27,7 +27,6 @@
     }
 
     viewer.innerHTML = CurrentNumber;
-
   };
 
   var moveNum = function() {
@@ -36,6 +35,7 @@
     operator = this.getAttribute("data-ops");
 
     equals.setAttribute("data-result", "");
+
   };
 
   var displayNum = function() {
@@ -62,6 +62,7 @@
 
       default:
         resultNum = CurrentNumber;
+
     }
 
     if (!isFinite(resultNum)) {
